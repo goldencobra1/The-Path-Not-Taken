@@ -1,0 +1,18 @@
+
+state={
+	id=972
+	name="STATE_972"
+
+	history={
+		owner = SAX
+		add_core_of = SAX
+	}
+
+	provinces={
+		538 6501 6524 9497 
+	}
+	manpower=50000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

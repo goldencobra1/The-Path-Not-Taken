@@ -1,0 +1,25 @@
+
+state={
+	id=970
+	name="STATE_970"
+
+	history={
+		owner = BAV
+		add_core_of = BAV
+
+		victory_points = {
+			708 3
+		}
+		victory_points = {
+			11499 3
+		}
+	}
+
+	provinces={
+		708 3690 6555 6581 9545 9655 9666 11499 11638 
+	}
+	manpower=50000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

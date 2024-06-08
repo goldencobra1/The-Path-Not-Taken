@@ -1,0 +1,22 @@
+
+state={
+	id=975
+	name="STATE_975"
+
+	history={
+		owner = BER
+		add_core_of = BER
+
+		victory_points = {
+			3522 5
+		}
+	}
+
+	provinces={
+		375 3367 3499 3522 9456 11219 11359 
+	}
+	manpower=50000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

@@ -1,0 +1,838 @@
+focus_tree = {
+	id = bav-stalin
+	continuous_focus_position = { x = 150 y = 1050 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BAV
+		}
+	}
+	#A Meeting in Moscow
+	focus = {
+		id = BAV_a_meeting_in_moscow
+		icon = GFX_BAV_a_meeting_in_moscow-262121
+		x = 2
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_address_the_state  }
+		completion_reward = {
+			country_event = bavaria.2
+		}
+	}
+
+	#Address the State
+	focus = {
+		id = BAV_address_the_state
+		icon = GFX_focus_generic_soviet_politics
+		x = 2
+		y = 0
+		cost = 2
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			country_event = bavaria.1
+		}
+	}
+
+	#The Trotskyist Threat
+	focus = {
+		id = BAV_the_trotskyist_threat
+		icon = GFX_BAV_the_trotskyist_threat-341
+		x = 2
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_a_meeting_in_moscow  }
+		completion_reward = {
+			country_event = bavaria.3
+		}
+	}
+
+	#Investigate the Soviet
+	focus = {
+		id = BAV_investigate_the_soviet
+		icon = GFX_BAV_investigate_the_soviet-262087
+		x = 4
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_trotskyist_threat  }
+	}
+
+	#Look Within the Army
+	focus = {
+		id = BAV_look_within_the_army
+		icon = GFX_BAV_look_within_the_army-646256
+		x = 0
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_trotskyist_threat  }
+	}
+
+	#A Call to Action
+	focus = {
+		id = BAV_a_call_to_action
+		icon = GFX_focus_generic_military_academy
+		x = 2
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_trotskyist_threat  }
+	}
+
+	#Announce an Investigation of the Church
+	focus = {
+		id = BAV_announce_an_investigation_of_the_church
+		icon = GFX_BAV_announce_an_investigation_of_the_church-645601
+		x = 3
+		y = 4
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_investigate_the_soviet  } prerequisite = { focus = BAV_look_within_the_army  } prerequisite = { focus = BAV_a_call_to_action  }
+	}
+
+	#Begin the Trials
+	focus = {
+		id = BAV_begin_the_trials
+		icon = GFX_BAV_begin_the_trials-262127
+		x = 1
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_start_the_arrests  }
+		mutually_exclusive = { focus = BAV_begin_the_trials  }
+		completion_reward = {
+			hidden_event ={
+				load_focus_tree = {
+                tree = bav-stalin
+				keep_complete = yes
+				}
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+	}
+
+	#The Peoples Republic
+	focus = {
+		id = BAV_the_peoples_republic
+		icon = GFX_BAV_the_peoples_republic-645600
+		x = 3
+		y = 6
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_start_the_arrests  }
+		mutually_exclusive = { focus = BAV_begin_the_trials  }
+	}
+
+	#Form the Stasi
+	focus = {
+		id = BAV_form_the_stasi
+		icon = GFX_focus_generic_join_comintern
+		x = 1
+		y = 4
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_investigate_the_soviet  } prerequisite = { focus = BAV_look_within_the_army  } prerequisite = { focus = BAV_a_call_to_action  }
+	}
+
+	#Start the Arrests
+	focus = {
+		id = BAV_start_the_arrests
+		icon = GFX_goal_generic_war_with_comintern
+		x = 2
+		y = 5
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_announce_an_investigation_of_the_church  } prerequisite = { focus = BAV_form_the_stasi  }
+	}
+
+	#The Ministry for State Security
+	focus = {
+		id = BAV_the_ministry_for_state_security
+		icon = GFX_BAV_the_ministry_for_state_security-645980
+		x = 19
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		allow_branch = {
+            has_completed_focus = BAV_begin_the_trials
+        }
+	}
+
+	#A Loyal Army
+	focus = {
+		id = BAV_a_loyal_army
+		icon = GFX_BAV_a_loyal_army-646246
+		x = 16
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_ministry_for_state_security  }
+	}
+
+	#The External Threat
+	focus = {
+		id = BAV_the_external_threat
+		icon = GFX_BAV_the_external_threat-262076
+		x = 19
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_ministry_for_state_security  }
+	}
+
+	#An Internal Defence
+	focus = {
+		id = BAV_an_internal_defence
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 22
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_ministry_for_state_security  }
+	}
+
+	#Investment into Counter Intelligence
+	focus = {
+		id = BAV_investment_into_counter_intelligence
+		icon = GFX_goal_unknown
+		x = 19
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_external_threat  }
+	}
+
+	#Members Within the Ranks
+	focus = {
+		id = BAV_members_within_the_ranks
+		icon = GFX_goal_unknown
+		x = 16
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_a_loyal_army  }
+	}
+
+	#Refine Infiltration Tactics
+	focus = {
+		id = BAV_refine_infiltration_tactics
+		icon = GFX_goal_unknown
+		x = 22
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_an_internal_defence  }
+	}
+
+	#Set Incentives to Snitch
+	focus = {
+		id = BAV_set_incentives_to_snitch
+		icon = GFX_goal_unknown
+		x = 22
+		y = 8
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_refine_infiltration_tactics  }
+	}
+
+	#Training to Maintain Networks
+	focus = {
+		id = BAV_training_to_maintain_networks
+		icon = GFX_goal_unknown
+		x = 22
+		y = 9
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_set_incentives_to_snitch  }
+	}
+
+	#Infiltrate Military Academies
+	focus = {
+		id = BAV_infiltrate_military_academies
+		icon = GFX_goal_unknown
+		x = 16
+		y = 8
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_members_within_the_ranks  }
+	}
+
+	#Reinforce Snitch Culture in the Ranks
+	focus = {
+		id = BAV_reinforce_snitch_culture_in_the_ranks
+		icon = GFX_goal_unknown
+		x = 16
+		y = 9
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_infiltrate_military_academies  }
+	}
+
+	#Expansion Within the German States
+	focus = {
+		id = BAV_expansion_within_the_german_states
+		icon = GFX_goal_unknown
+		x = 18
+		y = 8
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_investment_into_counter_intelligence  }
+	}
+
+	#Foreign Inteligence Gathering
+	focus = {
+		id = BAV_foreign_inteligence_gathering
+		icon = GFX_goal_unknown
+		x = 20
+		y = 8
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_investment_into_counter_intelligence  }
+	}
+
+	#Development into Codebreaking
+	focus = {
+		id = BAV_development_into_codebreaking
+		icon = GFX_goal_unknown
+		x = 19
+		y = 9
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_expansion_within_the_german_states  } prerequisite = { focus = BAV_foreign_inteligence_gathering  }
+	}
+
+	#The Eternal Eye of the State
+	focus = {
+		id = BAV_the_eternal_eye_of_the_state
+		icon = GFX_goal_unknown
+		x = 19
+		y = 11
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_reinforce_snitch_culture_in_the_ranks  } prerequisite = { focus = BAV_development_into_codebreaking  } prerequisite = { focus = BAV_training_to_maintain_networks  }
+	}
+
+	#Form the Integation Committee
+	focus = {
+		id = BAV_form_the_integation_committee
+		icon = GFX_goal_unknown
+		x = 8
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_plan_for_reunification  }
+	}
+
+	#The Volksarmee Stands Proud
+	focus = {
+		id = BAV_the_volksarmee_stands_proud
+		icon = GFX_goal_unknown
+		x = 19
+		y = 4
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_develop_guerrilla_tactics  focus = BAV_form_new_academies  }
+	}
+
+	#Further Urbanisation
+	focus = {
+		id = BAV_further_urbanisation
+		icon = GFX_goal_unknown
+		x = 12
+		y = 4
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = BAV_develop_our_2_year_plan  }
+	}
+
+	#Develop the U-Bahn
+	focus = {
+		id = BAV_develop_the_ubahn
+		icon = GFX_goal_unknown
+		x = 12
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_modern_city_planning  }
+	}
+
+	#The Ides of March
+	focus = {
+		id = BAV_the_ides_of_march
+		icon = GFX_goal_unknown
+		x = 7
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_liberate_berlin  } prerequisite = { focus = BAV_the_munich_agreement  }
+	}
+
+	#The Eternal Threat
+	focus = {
+		id = BAV_the_eternal_threat
+		icon = GFX_goal_unknown
+		x = 8
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_ides_of_march  } prerequisite = { focus = BAV_the_kiel_agreement  }
+	}
+
+	#Military Modernisation
+	focus = {
+		id = BAV_military_modernisation
+		icon = GFX_BAV_military_modernisation-262089
+		x = 19
+		y = 0
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		
+		allow_branch = {
+            has_completed_focus = BAV_begin_the_trials
+        }
+	}
+
+	#New Artillery Development
+	focus = {
+		id = BAV_new_artillery_development
+		icon = GFX_goal_unknown
+		x = 15
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_a_modern_army  }
+	}
+
+	#Complete the 2 Year Plan
+	focus = {
+		id = BAV_complete_the_2_year_plan
+		icon = GFX_goal_unknown
+		x = 13
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = BAV_develop_the_ubahn  } prerequisite = { focus = BAV_form_the_bayrischer_rundfunk  }
+	}
+
+	#Follow in the Footsteps of Stalin
+	focus = {
+		id = BAV_follow_in_the_footsteps_of_stalin
+		icon = GFX_goal_unknown
+		x = 7
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_peoples_soviet_stands_tall  }
+	}
+
+	#Form the Bayrischer Rundfunk
+	focus = {
+		id = BAV_form_the_bayrischer_rundfunk
+		icon = GFX_goal_unknown
+		x = 14
+		y = 6
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_investment_into_our_electric_grid  }
+	}
+
+	#The Kiel Agreement
+	focus = {
+		id = BAV_the_kiel_agreement
+		icon = GFX_goal_unknown
+		x = 9
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_liberate_berlin  } prerequisite = { focus = BAV_the_munich_agreement  }
+	}
+
+	#The Army of the People
+	focus = {
+		id = BAV_the_army_of_the_people
+		icon = GFX_goal_unknown
+		x = 22
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_military_modernisation  }
+		mutually_exclusive = { focus = BAV_a_modern_army  }
+	}
+
+	#A Modern Army
+	focus = {
+		id = BAV_a_modern_army
+		icon = GFX_goal_unknown
+		x = 16
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_military_modernisation  }
+		mutually_exclusive = { focus = BAV_the_army_of_the_people  }
+	}
+
+	#The Industry of War
+	focus = {
+		id = BAV_the_industry_of_war
+		icon = GFX_goal_unknown
+		x = 17
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_a_modern_army  }
+	}
+
+	#Form New Academies
+	focus = {
+		id = BAV_form_new_academies
+		icon = GFX_goal_unknown
+		x = 16
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_new_artillery_development  } prerequisite = { focus = BAV_the_industry_of_war  }
+	}
+
+	#Standardisation of Equipment
+	focus = {
+		id = BAV_standardisation_of_equipment
+		icon = GFX_goal_unknown
+		x = 21
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_army_of_the_people  }
+	}
+
+	#Mobilsation of the Masses
+	focus = {
+		id = BAV_mobilsation_of_the_masses
+		icon = GFX_goal_unknown
+		x = 23
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_army_of_the_people  }
+	}
+
+	#Develop Guerrilla Tactics
+	focus = {
+		id = BAV_develop_guerrilla_tactics
+		icon = GFX_goal_unknown
+		x = 22
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_standardisation_of_equipment  } prerequisite = { focus = BAV_mobilsation_of_the_masses  }
+	}
+
+	#The War of the Skies
+	focus = {
+		id = BAV_the_war_of_the_skies
+		icon = GFX_goal_unknown
+		x = 19
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_military_modernisation  }
+	}
+
+	#Construct More Airfields
+	focus = {
+		id = BAV_construct_more_airfields
+		icon = GFX_goal_unknown
+		x = 19
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_war_of_the_skies  }
+	}
+
+	#Rain of the Heavens
+	focus = {
+		id = BAV_rain_of_the_heavens
+		icon = GFX_goal_unknown
+		x = 20
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_construct_more_airfields  }
+		mutually_exclusive = { focus = BAV_control_the_battlefield  }
+	}
+
+	#Control the Battlefield
+	focus = {
+		id = BAV_control_the_battlefield
+		icon = GFX_goal_unknown
+		x = 18
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_construct_more_airfields  }
+		mutually_exclusive = { focus = BAV_rain_of_the_heavens  }
+	}
+
+	#Modern Rail Networks
+	focus = {
+		id = BAV_modern_rail_networks
+		icon = GFX_goal_unknown
+		x = 14
+		y = 4
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = BAV_develop_our_2_year_plan  }
+	}
+
+	#Develop our 2 Year Plan
+	focus = {
+		id = BAV_develop_our_2_year_plan
+		icon = GFX_BAV_develop_our_2_year_plan-645906
+		x = 13
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	
+		allow_branch = {
+            has_completed_focus = BAV_begin_the_trials
+        }
+	}
+
+	#Modern City Planning
+	focus = {
+		id = BAV_modern_city_planning
+		icon = GFX_goal_unknown
+		x = 12
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = BAV_further_urbanisation  }
+	}
+
+	#Investment into our Electric Grid
+	focus = {
+		id = BAV_investment_into_our_electric_grid
+		icon = GFX_goal_unknown
+		x = 14
+		y = 5
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = BAV_modern_rail_networks  }
+	}
+
+	#Liberate Berlin
+	focus = {
+		id = BAV_liberate_berlin
+		icon = GFX_goal_unknown
+		x = 7
+		y = 4
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_fascist_snakes  } prerequisite = { focus = BAV_form_the_integation_committee  } prerequisite = { focus = BAV_the_imperial_threat  }
+	}
+
+	#The Peoples Soviet Stands Tall
+	focus = {
+		id = BAV_the_peoples_soviet_stands_tall
+		icon = GFX_BAV_the_peoples_soviet_stands_tall-262130
+		x = 8
+		y = 0
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		
+		allow_branch = {
+            has_completed_focus = BAV_begin_the_trials
+        }
+	}
+
+	#Complete Bureaucratic Reforms
+	focus = {
+		id = BAV_complete_bureaucratic_reforms
+		icon = GFX_goal_unknown
+		x = 9
+		y = 1
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_peoples_soviet_stands_tall  }
+	}
+
+	#Plan for Reunification
+	focus = {
+		id = BAV_plan_for_reunification
+		icon = GFX_goal_unknown
+		x = 8
+		y = 2
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_follow_in_the_footsteps_of_stalin  } prerequisite = { focus = BAV_complete_bureaucratic_reforms  }
+	}
+
+	#Fascist Snakes
+	focus = {
+		id = BAV_fascist_snakes
+		icon = GFX_goal_unknown
+		x = 6
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_plan_for_reunification  }
+	}
+
+	#The Imperial Threat
+	focus = {
+		id = BAV_the_imperial_threat
+		icon = GFX_goal_unknown
+		x = 10
+		y = 3
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_plan_for_reunification  }
+	}
+
+	#The Munich Agreement
+	focus = {
+		id = BAV_the_munich_agreement
+		icon = GFX_goal_unknown
+		x = 9
+		y = 4
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_fascist_snakes  } prerequisite = { focus = BAV_the_imperial_threat  } prerequisite = { focus = BAV_form_the_integation_committee  }
+	}
+
+	#German Reunification
+	focus = {
+		id = BAV_german_reunification
+		icon = GFX_goal_unknown
+		x = 8
+		y = 7
+		cost = 3
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = BAV_the_eternal_threat  }
+	}
+
+}
