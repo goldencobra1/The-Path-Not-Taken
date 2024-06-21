@@ -5,26 +5,24 @@ country_event = {
 	id = bavaria.1
 	title = bavaria.1.t
 	desc = bavaria.1.d
-
 	picture = the_bavaria_soviet_addresses_the_people-948
+
 	fire_only_once = yes
 	is_triggered_only = yes
 	timeout_days = 30
-	option = {
+
+	option = { # Glory to the Soviet
 		name = bavaria.1.a
 		trigger = {
 			
 		}
 		ai_chance = { factor = 1 }
-		add_stability = 0.05
-
-add_war_support = 0.05
-
-add_political_power = 50
-
-
-		hidden_effect = {
-			
+		effect_tooltip = {
+			BAV = {
+				add_stability = 0.05
+				add_war_support = 0.05
+				add_political_power = 50
+			}
 		}
 	}
 }
@@ -34,11 +32,12 @@ country_event = {
 	id = bavaria.2
 	title = bavaria.2.t
 	desc = bavaria.2.d
-
 	picture = a_meeting_with_stalin-987
+
 	fire_only_once = yes
 	is_triggered_only = yes
 	timeout_days = 30
+
 	option = {
 		name = bavaria.2.a
 		trigger = {
@@ -46,9 +45,6 @@ country_event = {
 		}
 		ai_chance = { factor = 1 }
 		
-		hidden_effect = {
-			
-		}
 	}
 }
 
@@ -57,19 +53,14 @@ country_event = {
 	id = bavaria.3
 	title = bavaria.3.t
 	desc = bavaria.3.d
-
 	picture = NikmrUse-944
+
 	fire_only_once = yes
 	is_triggered_only = yes
+	timeout_days = 30
+
 	option = {
 		name = bavaria.3.a
-		trigger = {
-			
-		}
 		ai_chance = { factor = 1 }
-		
-		hidden_effect = {
-			
-		}
 	}
 }
