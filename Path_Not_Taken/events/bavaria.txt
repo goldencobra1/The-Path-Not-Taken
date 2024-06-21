@@ -64,3 +64,122 @@ country_event = {
 		ai_chance = { factor = 1 }
 	}
 }
+
+#Investigations into the Army
+country_event = {
+	id = bavaria.4
+	title = bavaria.4.t
+	desc = bavaria.4.d
+	picture = NikmrUse-944
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	timeout_days = 30
+
+	option = {
+		name = bavaria.4.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+#Call the People to Action
+country_event = {
+	id = bavaria.5
+	title = bavaria.5.t
+	desc = bavaria.5.d
+	picture = NikmrUse-944
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	timeout_days = 30
+
+	option = {
+		name = bavaria.5.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+#Investigations into the Soviet
+country_event = {
+	id = bavaria.6
+	title = bavaria.6.t
+	desc = bavaria.6.d
+	picture = NikmrUse-944
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	timeout_days = 30
+
+	option = {
+		name = bavaria.6.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+#Formation of the Ministerium für Staatssicherheit
+country_event = {
+	id = bavaria.7
+	title = bavaria.7.t
+	desc = bavaria.7.d
+	picture = NikmrUse-944
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	timeout_days = 30
+
+	option = {
+		name = bavaria.7.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+#Announcement of a Church Investigation
+country_event = {
+	id = bavaria.8
+	title = bavaria.8.t
+	desc = bavaria.8.d
+	picture = NikmrUse-944
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	timeout_days = 30
+
+	option = {
+		name = bavaria.8.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+#The Begginning of the Arrests
+country_event = {
+	id = bavaria.9
+	title = bavaria.9.t
+	desc = bavaria.9.d
+	picture = NikmrUse-944
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	timeout_days = 30
+
+	option = {
+		name = bavaria.9.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+#The Trials Begin
+country_event = {
+	id = bavaria.10
+	title = bavaria.10.t
+	desc = bavaria.10.d
+	picture = NikmrUse-944
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	timeout_days = 30
+
+	option = {
+		name = bavaria.10.a
+		ai_chance = { factor = 1 }
+	}
+}

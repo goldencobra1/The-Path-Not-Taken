@@ -66,6 +66,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = BAV_the_trotskyist_threat  }
+		completion_reward = {
+			country_event = bavaria.6
+		}
 	}
 
 	#Look Within the Army
@@ -79,6 +82,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = BAV_the_trotskyist_threat  }
+		completion_reward = {
+			country_event = bavaria.4
+		}
 	}
 
 	#A Call to Action
@@ -92,6 +98,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = BAV_the_trotskyist_threat  }
+		completion_reward = {
+			country_event = bavaria.5
+		}
 	}
 
 	#Announce an Investigation of the Church
@@ -105,6 +114,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = BAV_investigate_the_soviet  } prerequisite = { focus = BAV_look_within_the_army  } prerequisite = { focus = BAV_a_call_to_action  }
+		completion_reward = {
+			country_event = bavaria.8
+		}
 	}
 
 	#Begin the Trials
@@ -120,6 +132,7 @@ focus_tree = {
 		prerequisite = { focus = BAV_start_the_arrests  }
 		mutually_exclusive = { focus = BAV_the_peoples_republic  }
 		completion_reward = {
+			country_event = bavaria.10
 			hidden_effect ={
 				load_focus_tree = {
                 tree = bav-stalin
@@ -155,6 +168,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = BAV_investigate_the_soviet  } prerequisite = { focus = BAV_look_within_the_army  } prerequisite = { focus = BAV_a_call_to_action  }
+		completion_reward = {
+			country_event = bavaria.7
+		}
 	}
 
 	#Start the Arrests
@@ -168,6 +184,9 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = BAV_announce_an_investigation_of_the_church  } prerequisite = { focus = BAV_form_the_stasi  }
+		completion_reward = {
+			country_event = bavaria.9
+		}
 	}
 
 	#The Ministry for State Security
