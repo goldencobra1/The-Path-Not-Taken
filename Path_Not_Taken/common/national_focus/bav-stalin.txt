@@ -118,7 +118,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		prerequisite = { focus = BAV_start_the_arrests  }
-		mutually_exclusive = { focus = BAV_begin_the_trials  }
+		mutually_exclusive = { focus = BAV_the_peoples_republic  }
 		completion_reward = {
 			hidden_event ={
 				load_focus_tree = {
