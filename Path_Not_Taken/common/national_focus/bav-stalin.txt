@@ -120,7 +120,7 @@ focus_tree = {
 		prerequisite = { focus = BAV_start_the_arrests  }
 		mutually_exclusive = { focus = BAV_the_peoples_republic  }
 		completion_reward = {
-			hidden_event ={
+			hidden_effect ={
 				load_focus_tree = {
                 tree = bav-stalin
 				keep_complete = yes
