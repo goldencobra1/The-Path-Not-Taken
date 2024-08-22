@@ -183,3 +183,71 @@ country_event = {
 		ai_chance = { factor = 1 }
 	}
 }
+
+#The Peoples Soviet Stands Tall
+country_event = {
+	id = bavaria.11
+	title = bavaria.11.t
+	desc = bavaria.11.d
+	picture = NikmrUse-944
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	timeout_days = 30
+
+	option = {
+		name = bavaria.11.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+#Following Stalins Lead
+country_event = {
+	id = bavaria.12
+	title = bavaria.12.t
+	desc = bavaria.12.d
+	picture = NikmrUse-944
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	timeout_days = 30
+
+	option = {
+		name = bavaria.12.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+#Reform on All Levels
+country_event = {
+	id = bavaria.13
+	title = bavaria.13.t
+	desc = bavaria.13.d
+	picture = NikmrUse-944
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	timeout_days = 30
+
+	option = {
+		name = bavaria.13.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+#The Plan for Reunification
+country_event = {
+	id = bavaria.14
+	title = bavaria.14.t
+	desc = bavaria.14.d
+	picture = NikmrUse-944
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	timeout_days = 30
+
+	option = {
+		name = bavaria.14.a
+		ai_chance = { factor = 1 }
+	}
+}

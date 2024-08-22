@@ -519,6 +519,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		completion_reward = {
+			country_event = bavaria.12
+		}
 		prerequisite = { focus = BAV_the_peoples_soviet_stands_tall  }
 	}
 
@@ -773,7 +776,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
-		
+		completion_reward = {
+			country_event = bavaria.11
+		}
 		allow_branch = {
             has_completed_focus = BAV_begin_the_trials
         }
@@ -789,6 +794,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		completion_reward = {
+			country_event = bavaria.13
+		}
 		prerequisite = { focus = BAV_the_peoples_soviet_stands_tall  }
 	}
 
@@ -801,6 +809,9 @@ focus_tree = {
 		cost = 3
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			country_event = bavaria.14
 		}
 		prerequisite = { focus = BAV_follow_in_the_footsteps_of_stalin  } prerequisite = { focus = BAV_complete_bureaucratic_reforms  }
 	}
