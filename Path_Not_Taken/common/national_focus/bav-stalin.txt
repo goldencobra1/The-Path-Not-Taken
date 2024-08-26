@@ -953,7 +953,35 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		completion_reward = {
-			add_state_core = {5,42,44,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,188,762,763,848,909,970,971,972,973,974,975,976,977,978}
+			add_state_core = 5
+			add_state_core = 42
+			add_state_core = 50
+			add_state_core = 51
+			add_state_core = 55
+			add_state_core = 56
+			add_state_core = 57
+			add_state_core = 58
+			add_state_core = 59
+			add_state_core = 60
+			add_state_core = 61
+			add_state_core = 62
+			add_state_core = 63
+			add_state_core = 64
+			add_state_core = 65
+			add_state_core = 66
+			add_state_core = 67
+			add_state_core = 68
+			add_state_core = 188
+			add_state_core = 762
+			add_state_core = 763
+			add_state_core = 909
+			add_state_core = 972
+			add_state_core = 973
+			add_state_core = 974
+			add_state_core = 975
+			add_state_core = 976
+			add_state_core = 977
+			add_state_core = 978
 		}
 		available = {
 			has_offensive_war = no
