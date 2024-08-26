@@ -399,6 +399,9 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		completion_reward = {
+			add_ideas = BAV_Integration_Committee
+		}
 		prerequisite = { focus = BAV_plan_for_reunification  }
 	}
 
@@ -451,6 +454,18 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = PRE
+			}
+		}
+		available = {
+			has_offensive_war = no
+			not = {
+				has_idea = BAV_Integration_idea
+			}
+		}
 		prerequisite = { focus = BAV_liberate_berlin  } prerequisite = { focus = BAV_the_munich_agreement  }
 	}
 
@@ -463,6 +478,18 @@ focus_tree = {
 		cost = 3
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = RHI
+			}
+		}
+		available = {
+			has_offensive_war = no
+			not = {
+				has_idea = BAV_Integration_idea
+			}
 		}
 		prerequisite = { focus = BAV_the_ides_of_march  } prerequisite = { focus = BAV_the_kiel_agreement  }
 	}
@@ -547,6 +574,18 @@ focus_tree = {
 		cost = 3
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = SHL
+			}
+		}
+		available = {
+			has_offensive_war = no
+			not = {
+				has_idea = BAV_Integration_idea
+			}
 		}
 		prerequisite = { focus = BAV_liberate_berlin  } prerequisite = { focus = BAV_the_munich_agreement  }
 	}
@@ -763,6 +802,18 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = BER
+			}
+		}
+		available = {
+			has_offensive_war = no
+			not = {
+				has_idea = BAV_Integration_idea
+			}
+		}
 		prerequisite = { focus = BAV_fascist_snakes  } prerequisite = { focus = BAV_form_the_integation_committee  } prerequisite = { focus = BAV_the_imperial_threat  }
 	}
 
@@ -826,6 +877,18 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = SAX
+			}
+		}
+		available = {
+			has_offensive_war = no
+			not = {
+				has_idea = BAV_Integration_idea
+			}
+		}
 		prerequisite = { focus = BAV_plan_for_reunification  }
 	}
 
@@ -838,6 +901,18 @@ focus_tree = {
 		cost = 3
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = HAN
+			}
+		}
+		available = {
+			has_offensive_war = no
+			not = {
+				has_idea = BAV_Integration_idea
+			}
 		}
 		prerequisite = { focus = BAV_plan_for_reunification  }
 	}
@@ -852,6 +927,18 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		completion_reward = {
+			declare_war_on = {
+				type = annex_everything
+				target = SIL
+			}
+		}
+		available = {
+			has_offensive_war = no
+			not = {
+				has_idea = BAV_Integration_idea
+			}
+		}
 		prerequisite = { focus = BAV_fascist_snakes  } prerequisite = { focus = BAV_the_imperial_threat  } prerequisite = { focus = BAV_form_the_integation_committee  }
 	}
 
@@ -864,6 +951,12 @@ focus_tree = {
 		cost = 3
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_state_core = {5,42,44,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,188,762,763,848,909,970,971,972,973,974,975,976,977,978}
+		}
+		available = {
+			has_offensive_war = no
 		}
 		prerequisite = { focus = BAV_the_eternal_threat  }
 	}
