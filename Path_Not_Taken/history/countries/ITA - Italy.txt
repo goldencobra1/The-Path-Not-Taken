@@ -724,7 +724,7 @@ set_popularities = {
 	neutrality = 5
 }
 
-create_faction = Italian_League
+create_faction = "Italian League"
 add_to_faction = ITA
 add_to_faction = HUN 
 add_to_faction = AUS 

@@ -36,7 +36,7 @@ if = {
 	}
 }
 
-create_faction = Balkan_Pact 
+create_faction = "Balkan Pact"
 add_to_faction = YUG 
 add_to_faction = GRE 
 add_to_faction = ROM 
